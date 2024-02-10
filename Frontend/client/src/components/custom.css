@@ -1,0 +1,63 @@
+#service-text{
+    font-size:70px; 
+    font-weight:600;
+}
+
+.help-me {
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border:   lightgray;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+    box-shadow: lightgray ;
+}
+
+.help-me:hover {
+    letter-spacing: 3px;
+    background-color: hsl(0, 80%, 48%); /* Red shade */
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(220 24 24 / 80%) 0px 7px 29px 0px; /* Red shade */
+}
+
+.help-me:active {
+    letter-spacing: 3px;
+    background-color: hsl(0, 80%, 48%); /* Red shade */
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(220 24 24) 0px 0px 0px 0px; /* Red shade */
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+#img1{
+    height:280px; 
+    width:480px; 
+    border-radius:3%; 
+}
+
+#about-us{
+    font-size:25px; 
+    
+}
+#commited{
+    font-size:50px; 
+    font-weight:600; 
+}
+#services{
+    font-size:55px; 
+    font-weight:600; 
+}
+#our-services{
+    width:1000px; 
+}
+#img2{
+    height:250px; 
+    width:300px; 
+    border-radius:10px;
+}
+
+
