@@ -7,6 +7,9 @@ import Mainpage from './components/Mainpage'
 import {BrowserRouter, Route,Routes} from 'react-router-dom'
 import LoginForm from './components/Login'
 import SignUp from './components/SignUp'
+import AdminLogin from './components/AdminLogin'
+import Helpothers from './components/Helpothers'
+import Otpinput from './components/Otpinput'
 
 function App() {
  
@@ -20,6 +23,9 @@ function App() {
           <Route path='/help'>Hello this help page</Route>
           <Route path='/login' element={<LoginForm/>}></Route>
           <Route path='/signup' element={<SignUp/>}></Route>
+          <Route path='/mZCRAFS816oegLYamoAgH3CeT7ipAljDByWKxD9BOipIxE5lVL' element={<AdminLogin/>}></Route>
+          <Route path='/help-others' element={<Helpothers/>}></Route>
+          <Route path='/medical-emergency-to' element={<Otpinput/>}></Route>
         </Routes>
       </BrowserRouter>
      
@@ -27,4 +33,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

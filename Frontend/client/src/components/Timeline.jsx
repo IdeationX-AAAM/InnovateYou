@@ -55,16 +55,7 @@ function Timeline() {
 
       {/* Add more hardcoded items as needed */}
 
-      <li>
-        <div className="direction-l">
-          <div className="flag-wrapper">
-            <span className="hexa"></span>
-            <span className="flag">Victim Saved</span>
-            <span className="time-wrapper"><span className="time">15 min</span></span>
-          </div>
-          <div className="desc">After the ambulance reaches the spot , the patient is safely brought to the hospital </div>
-        </div>
-      </li>
+
     </ul>
   );
 }

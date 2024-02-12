@@ -7,19 +7,38 @@ import tfseven from '../assets/24-hours.png'
 import siren from '../assets/siren.png'
 import Timeline from './Timeline';
 import { Link } from 'react-router-dom';
+import { useAuth0 } from "@auth0/auth0-react";
 
 
 
 const Mainpage= ()=>{
+    const{isAuthenticated,loginWithRedirect} = useAuth0();
     return(
         <>
             
-
             <div className='mt-48 ml-32'>
                 <h1 className='' id='service-text'>Trust in Emergency</h1>
                 <p className='ml-3'>In critical times rely on Tiru’s Emergency SOS Services.</p>
                 <p className='ml-3'> We are here to provide immediate assistance in Pune , MH. </p>
-                <Link to='/help'><button className = "help-me mt-10">Request Help !</button></Link>
+                {isAuthenticated ? (
+                    <>
+                        <Link to='/help-me'>
+                            <button className='help-me mt-10 ml-4'>Request Help For Me!</button>
+                        </Link>
+                        <Link to='/help-others'>
+                            <button className='help-me mt-10 ml-4'>Request Help For Others!</button>
+                        </Link>
+                        <Link to='/hospital-near-me'>
+                            <button className='help-me mt-10 ml-4'>Hospitals Near Me</button>
+                        </Link>
+                    </>
+                ) : (
+                    <>
+                        <button className='help-me mt-10 ml-4' onClick={() => loginWithRedirect()}>Request Help for Me!</button>
+                        <button className='help-me mt-10 ml-4' onClick={() => loginWithRedirect()}>Request Help for Others!</button>
+                        <button className='help-me mt-10 ml-4' onClick={() => loginWithRedirect()}>Hospitals Near Me</button>
+                    </>
+                )}
             </div>
 
             <div>
