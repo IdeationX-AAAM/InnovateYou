@@ -1,5 +1,6 @@
 import { useAuth0 } from '@auth0/auth0-react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Otpinput = () => {
   const { user } = useAuth0();
@@ -9,7 +10,7 @@ const Otpinput = () => {
       <div className="text-center p-4">
         <h1 className="mb-4">Otp has been sent to {user && user.email}</h1>
         <input type="password" placeholder="Enter your 4 digit OTP" className="border border-gray-300 px-4 py-2 mb-4" />
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Verify Now</button>
+        <Link to='/send-mail'><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Verify Now</button></Link>
       </div>
     </div>
   );
