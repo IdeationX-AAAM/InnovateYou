@@ -4,7 +4,7 @@ import ambulance from '../assets/ambulance.png';
 import escort from '../assets/escort.png';
 import mechanic from '../assets/mechanic.png';
 import { Link, useNavigate } from 'react-router-dom';
-import twilio from 'twilio'
+
 
 const Helpothers = () => {
     const [callInitiated, setCallInitiated] = useState(false);

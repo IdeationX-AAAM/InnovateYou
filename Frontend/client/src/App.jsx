@@ -10,6 +10,7 @@ import SignUp from './components/SignUp'
 import AdminLogin from './components/AdminLogin'
 import Helpothers from './components/Helpothers'
 import Otpinput from './components/Otpinput'
+import NearHospitals from './components/NearHospitals'
 
 function App() {
  
@@ -25,6 +26,7 @@ function App() {
           <Route path='/signup' element={<SignUp/>}></Route>
           <Route path='/mZCRAFS816oegLYamoAgH3CeT7ipAljDByWKxD9BOipIxE5lVL' element={<AdminLogin/>}></Route>
           <Route path='/help-others' element={<Helpothers/>}></Route>
+          <Route path='/hospital-near-me' element={<NearHospitals/>}></Route>
           <Route path='/medical-emergency-to' element={<Otpinput/>}></Route>
         </Routes>
       </BrowserRouter>
