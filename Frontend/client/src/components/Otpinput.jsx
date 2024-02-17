@@ -8,7 +8,9 @@ const Otpinput = () => {
   return (
     <>
       <div>
-        <h1>{user && user.email}</h1>
+        <h1>Otp has been sent to {user && user.email}</h1>
+        <input>Enter your 4 digit one time password here</input>
+        <button>Verify Now</button>
       </div>
     </>
   );

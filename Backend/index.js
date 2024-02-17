@@ -1,25 +1,19 @@
-// Import the Express module
-import express from 'express'
+import dotenv from 'dotenv';
+import connectDB from './db/main.js';
+import { connect } from 'mongoose';
+import { app } from './app.js'; 
 
-// Create an instance of Express
-const app = express();
 
-// Define a route for the root URL
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
 
-// Define a route for '/about'
-app.get('/about', (req, res) => {
-  res.send('This is the about page.');
-});
+dotenv.config({path:'/.env'});
 
-// Define a route for handling 404 errors
-app.use((req, res) => {
-  res.status(404).send("Sorry, can't find that!");
-});
 
-// Start the server and listen on port 3000
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+connectDB()
+.then(()=>{
+    app.listen(process.env.PORT || 8000 ,()=>{
+        console.log(`Server is running at ${process.env.PORT}`)
+    })
+})
+.catch((err)=>{
+    console.log("MongoDB connection failed", err)
 });
